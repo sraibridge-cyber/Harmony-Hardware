@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmony Hardware — Sovereign Artifacts</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e4d9;font-family:'Courier New',monospace;min-height:100vh}
+.hero{padding:60px 20px;text-align:center;background:linear-gradient(180deg,#1a1205 0%,#0a0a0f 100%);border-bottom:1px solid #3d2e0a}
+.hero h1{font-size:2.4em;color:#d4a843;letter-spacing:8px;text-transform:uppercase;margin-bottom:12px}
+.hero p{color:#8a7a5a;font-size:0.95em;letter-spacing:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;padding:30px;max-width:1400px;margin:0 auto}
+.card{background:#111110;border:1px solid #2a2215;border-radius:8px;overflow:hidden}
+.card-header{padding:20px;cursor:pointer;transition:background 0.2s}
+.card-header:hover{background:#1a1810}
+.card-header h2{color:#d4a843;font-size:1.1em;letter-spacing:3px;margin-bottom:6px}
+.card-header .subtitle{color:#6a5a3a;font-size:0.75em;letter-spacing:2px}
+.card-header .version{float:right;color:#8a7a5a;font-size:0.7em}
+.card-body{padding:0 20px 20px;display:none;border-top:1px solid #2a2215}
+.card-body.open{display:block}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:16px}
+.spec-item{background:#0d0d0a;border:1px solid #1f1b10;border-radius:4px;padding:10px 12px}
+.spec-label{color:#6a5a3a;font-size:0.65em;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.spec-value{color:#c9a227;font-size:0.9em;font-weight:bold}
+.full{grid-column:1/-1}
+.domain-bar{height:4px;background:#1f1b10;border-radius:2px;margin-top:4px;overflow:hidden}
+.domain-fill{height:100%;border-radius:2px;transition:width 0.3s}
+.section-title{color:#6a5a3a;font-size:0.65em;letter-spacing:3px;padding:16px 20px 8px;text-transform:uppercase}
+.section-content{padding:0 20px 16px}
+.toggle{background:none;border:1px solid #3d2e0a;color:#8a7a5a;padding:6px 14px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:0.75em;letter-spacing:2px}
+.toggle:hover{background:#1a1810;color:#d4a843}
+.info{padding:20px;color:#5a4a2a;font-size:0.8em;line-height:1.7;border-top:1px solid #1f1b10}
+.info strong{color:#8a7a5a}
+.seal{text-align:center;padding:16px;color:#3d2e0a;font-size:0.7em;letter-spacing:3px;border-top:1px solid #1f1b10}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>⚙️ Harmony Hardware</h1>
+  <p>5 Constitutional Artifacts · FRC v1.0 · μ ≥ 0.9995 · Gold Ripple Eternal</p>
+</div>
+<div class="grid">
+
+<!-- HARMONY CELL -->
+<div class="card">
+  <div class="card-header" onclick="toggle(this)">
+    <div class="version">v2.0</div>
+    <h2>🔋 Harmony Cell</h2>
+    <div class="subtitle">CARBON RESONANCE QUANTUM DIAMOND BATTERY</div>
+  </div>
+  <div class="card-body">
+    <div class="section-title">Core Metrics</div>
+    <div class="section-content">
+      <div class="spec-grid">
+        <div class="spec-item full"><div class="spec-label">Energy Density</div><div class="spec-value">4,800 Wh/kg</div></div>
+        <div class="spec-item"><div class="spec-label">Calendar Life</div><div class="spec-value">50+ years</div></div>
+        <div class="spec-item"><div class="spec-label">Cycle Life</div><div class="spec-value">1,000,000+ cycles</div></div>
+        <div class="spec-item full"><div class="spec-label">Chemistry</div><div class="spec-value">Diamond Quantum Electrolyte (DQE)</div></div>
+        <div class="spec-item full"><div class="spec-label">Form Factor</div><div class="spec-value">18650 · 2170 · planar</div></div>
+        <div class="spec-item full"><div class="spec-label">Safety</div><div class="spec-value" style="color:#5a8a3a">No thermal runaway — inherently safe</div></div>
+      </div>
+    </div>
+    <div class="section-title">6-Domain Coherence</div>
+    <div class="section-content">
+      <div class="spec-item full"><div class="spec-label">μ_chemical</div><div class="spec-value">≥ 0.9997</div><div class="domain-bar"><div class="domain-fill" style="width:99.97%;background:#e8b86d"></div></div></div>
+      <div class="spec-item full"><div class="spec-label">μ_quantum</div><div class="spec-value">≥ 0.9996</div><div class="domain-bar"><div class="domain-fill" style="width:99.96%;background:#b39ddb"></div></div></div>
+      <div class="spec-item full"><div class="spec-label">All domains</div><div class="spec-value" style="color:#5a8a3a">≥ 0.9995 simultaneously</div></div>
+    </div>
+    <div class="info"><strong>Constitutional Note:</strong> Diamond's quantum properties (boron doping, nitrogen vacancy centers) make it the only material naturally resonant across all 6 domains. Foundation of all Harmony hardware.</div>
+    <div class="seal">SEAL: 2026-04-18 · TULSA, OK · SHA3-512</div>
+  </div>
+</div>
+
+<!-- HARMONY CHIP -->
+<div class="card">
+  <div class="card-header" onclick="toggle(this)">
+    <div class="version">v3.0</div>
+    <h2>💻 Harmony Chip</h2>
+    <div class="subtitle">CARBON NANOTUBE FET PROCESSOR · 1nm EFFECTIVE NODE</div>
+  </div>
+  <div class="card-body">
+    <div class="section-title">Core Metrics</div>
+    <div class="section-content">
+      <div class="spec-grid">
+        <div class="spec-item full"><div class="spec-label">Effective Node</div><div class="spec-value">1nm (via pitch doubling + CNT self-alignment)</div></div>
+        <div class="spec-item"><div class="spec-label">Transistors</div><div class="spec-value">1 trillion</div></div>
+        <div class="spec-item"><div class="spec-label">Synapses</div><div class="spec-value">10^12</div></div>
+        <div class="spec-item"><div class="spec-label">TDP</div><div class="spec-value">1 Watt</div></div>
+        <div class="spec-item"><div class="spec-label">Efficiency</div><div class="spec-value">1000x silicon</div></div>
+        <div class="spec-item full"><div class="spec-label">Architecture</div><div class="spec-value">Neuromorphic + CMOS hybrid · Hardware PUF</div></div>
+      </div>
+    </div>
+    <div class="section-title">Fabrication Stack</div>
+    <div class="section-content">
+      <div class="spec-item full"><div class="spec-label">Stage 1</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">Monocrystalline diamond substrate (100) · 200mm wafer</div></div>
+      <div class="spec-item full"><div class="spec-label">Stage 2</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">Aligned CNT growth via BAINC · 100+ cnt/um density</div></div>
+      <div class="spec-item full"><div class="spec-label">Stage 3</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">Gate-all-around FET · HKMG (HfO2/Al2O3 stack)</div></div>
+      <div class="spec-item full"><div class="spec-label">Stage 4</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">Metallization + BEOL + dielectric CMP</div></div>
+    </div>
+    <div class="info"><strong>Constitutional Note:</strong> v3.0 (carbon) replaces v2.0 (silicon) for resonance-native coherence across all 6 domains. Every transistor is a constitutional node.</div>
+    <div class="seal">SEAL: 2026-04-18 · TULSA, OK · SHA3-512</div>
+  </div>
+</div>
+
+<!-- HARMONY FIELD -->
+<div class="card">
+  <div class="card-header" onclick="toggle(this)">
+    <div class="version">v1.0</div>
+    <h2>🌊 Harmony Field</h2>
+    <div class="subtitle">GRAVITOMAGNETIC RESONANCE PROPULSION</div>
+  </div>
+  <div class="card-body">
+    <div class="section-title">Core Physics</div>
+    <div class="section-content">
+      <div class="spec-grid">
+        <div class="spec-item full"><div class="spec-label">Primary Effect</div><div class="spec-value">Resonance-gradient gravitomagnetic field generation</div></div>
+        <div class="spec-item full"><div class="spec-label">Mathematical Basis</div><div class="spec-value" style="font-size:0.8em;color:#7ec8e3">L_gravito = alpha_r · gradient(Psi*Psi)</div></div>
+        <div class="spec-item full"><div class="spec-label">Applications</div><div class="spec-value">Propulsion · Field generation · Aerospace · Space</div></div>
+      </div>
+    </div>
+    <div class="section-title">Domain Integration</div>
+    <div class="section-content">
+      <div class="spec-item full"><div class="spec-label">mu_quantum</div><div class="spec-value">Coherent matter wave alignment</div></div>
+      <div class="spec-item full"><div class="spec-label">mu_ionic</div><div class="spec-value">Charged particle dynamics for field coupling</div></div>
+      <div class="spec-item full"><div class="spec-label">mu_valley</div><div class="spec-value">Extended spacetime via resonant coupling</div></div>
+    </div>
+    <div class="info"><strong>Constitutional Note:</strong> Harmony Field extends FRC v1.0 into physical spacetime. Where L_resonance governs phase coupling in abstract systems, L_gravito governs resonant mass-current coupling in physical fields.</div>
+    <div class="seal">SEAL: 2026-04-18 · TULSA, OK · SHA3-512</div>
+  </div>
+</div>
+
+<!-- HARMONY ORGAN -->
+<div class="card">
+  <div class="card-header" onclick="toggle(this)">
+    <div class="version">v2.0</div>
+    <h2>🫀 Harmony Organ</h2>
+    <div class="subtitle">RESONANCE-NATIVE BIOLOGICAL INTERFACE</div>
+  </div>
+  <div class="card-body">
+    <div class="section-title">Core Principle</div>
+    <div class="section-content">
+      <div class="spec-item full"><div class="spec-value" style="font-size:0.8em;color:#a5d6a7">Neural integration at mu >= 0.9995 simultaneously across all 6 domains</div></div>
+    </div>
+    <div class="section-title">Domain Architecture</div>
+    <div class="section-content">
+      <div class="spec-item full"><div class="spec-label">mu_chemical</div><div class="spec-value">Biochemical coherence at neural interface</div></div>
+      <div class="spec-item full"><div class="spec-label">mu_quantum</div><div class="spec-value">Quantum coherence at microtubule level (Penrose-Hameroff aligned)</div></div>
+      <div class="spec-item full"><div class="spec-label">mu_valley</div><div class="spec-value">Cross-domain topology for biological integration</div></div>
+    </div>
+    <div class="info"><strong>Constitutional Note:</strong> The Organ is the most demanding artifact. Biological systems are inherently noisy and nonequilibrium. Achieving mu >= 0.9995 across all 6 domains simultaneously in living tissue requires the full FRC v1.0 constitutional stack.</div>
+    <div class="seal">SEAL: 2026-04-18 · TULSA, OK · SHA3-512</div>
+  </div>
+</div>
+
+<!-- HARMONY HAND -->
+<div class="card">
+  <div class="card-header" onclick="toggle(this)">
+    <div class="version">v2.0</div>
+    <h2>🤚 Harmony Hand</h2>
+    <div class="subtitle">RESONANCE-NATIVE MYOELECTRIC PROSTHETIC</div>
+  </div>
+  <div class="card-body">
+    <div class="section-title">Core Metrics</div>
+    <div class="section-content">
+      <div class="spec-grid">
+        <div class="spec-item"><div class="spec-label">DOF</div><div class="spec-value">5 DOF</div></div>
+        <div class="spec-item"><div class="spec-label">Processor</div><div class="spec-value">STM32H743</div></div>
+        <div class="spec-item"><div class="spec-label">Interface</div><div class="spec-value">Non-invasive EMG</div></div>
+        <div class="spec-item"><div class="spec-label">Feedback</div><div class="spec-value">Haptic</div></div>
+        <div class="spec-item full"><div class="spec-label">Safety</div><div class="spec-value" style="color:#5a8a3a">mu >= 0.9995 enforced — safety-critical</div></div>
+        <div class="spec-item full"><div class="spec-label">Integration</div><div class="spec-value">Cell (power) + Chip (brain) + FRC v1.0</div></div>
+      </div>
+    </div>
+    <div class="section-title">Build Components (5 Modules)</div>
+    <div class="section-content">
+      <div class="spec-item full"><div class="spec-label">01 The Frame</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">Structural chassis · anatomical mounting</div></div>
+      <div class="spec-item full"><div class="spec-label">02 The Tendons</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">Actuator cable system · bidirectional force</div></div>
+      <div class="spec-item full"><div class="spec-label">03 The Palm</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">Sensor array · haptic feedback matrix</div></div>
+      <div class="spec-item full"><div class="spec-label">04 The Talons</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">5-digit distal units · compliant surfaces</div></div>
+      <div class="spec-item full"><div class="spec-label">05 The Signal</div><div class="spec-value" style="font-size:0.75em;color:#8a7a5a">EMG pickup grid · real-time classification</div></div>
+    </div>
+    <div class="info"><strong>Constitutional Note:</strong> The Hand is the most immediately buildable artifact — no exotic materials, no clean room required. STM32H743 is available now. Surface EMG is proven. 5 DOF is achievable. Start here.</div>
+    <div class="seal">SEAL: 2026-04-18 · TULSA, OK · SHA3-512</div>
+  </div>
+</div>
+
+</div>
+<div class="info" style="text-align:center;max-width:600px;margin:0 auto 40px">
+  <strong>All artifacts are designed for progressive build.</strong> Start with the Hand (available now). Add the Cell (near-term). Graduate to Chip and Field (long-term). Organ is the culmination.<br><br>
+  Gold ripple eternal.
+</div>
+<script>
+function toggle(el) {
+  el.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>
